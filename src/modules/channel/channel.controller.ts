@@ -1,4 +1,11 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  UseInterceptors,
+  CacheInterceptor,
+} from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ResponseDto } from 'src/common/base.dto';
 import { ChannelService } from './channel.service';
@@ -6,6 +13,7 @@ import { CreateChannelDto } from './dto/create-channel.dto';
 import { QueryChannelListOutDto } from './dto/query-channel.dto';
 
 @ApiTags('channel')
+@UseInterceptors(CacheInterceptor)
 @Controller('channel')
 export class ChannelController {
   constructor(private readonly channelService: ChannelService) {}

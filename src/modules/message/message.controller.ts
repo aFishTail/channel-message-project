@@ -6,6 +6,8 @@ import {
   Param,
   Query,
   ParseIntPipe,
+  UseInterceptors,
+  CacheInterceptor,
 } from '@nestjs/common';
 import { MessageService } from './message.service';
 import { CreateMessageDto } from './dto/create-message.dto';
@@ -13,10 +15,12 @@ import {
   QueryMessageListInputDto,
   QueryMessageListOutDto,
 } from './dto/query-message.dto';
-import { ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ResponseDto } from 'src/common/base.dto';
 
+@ApiTags('message')
 @Controller('message')
+@UseInterceptors(CacheInterceptor)
 export class MessageController {
   constructor(private readonly messageService: MessageService) {}
 

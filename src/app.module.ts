@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { CacheModule, Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import configuration from '../config/configuration';
@@ -33,6 +33,7 @@ import { MessageModule } from './modules/message/message.module';
         },
       }),
     }),
+    CacheModule.register({ isGlobal: true }),
     ChannelModule,
     MessageModule,
   ],

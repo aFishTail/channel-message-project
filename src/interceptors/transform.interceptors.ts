@@ -18,7 +18,6 @@ export class TransformInterceptor<T>
         const ctx = context.switchToHttp();
         const response = ctx.getResponse();
         const code = response.statusCode;
-        console.log('dara:', data);
         return {
           code,
           data: data || null,
