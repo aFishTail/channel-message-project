@@ -2,9 +2,11 @@
 
 ### 准备工作
 
+```
 1. git clone <https://github.com/aFishTail/channel-message-project>  && cd channel-message-project
 2. create database
 3. cp config/config.example.yaml config/config.yaml
+```
 
 ### 安装依赖
 
