@@ -1,26 +1,29 @@
 ## Setup
 
 ### 准备工作
-1. fir clone cd
+
+1. git clone <https://github.com/aFishTail/channel-message-project>  && cd channel-message-project
 2. create database
 3. cp config/config.example.yaml config/config.yaml
 
 ### 安装依赖
 
 推荐使用yarn
+
 ```
 yarn
 ```
 
 ### 运行
+
 ```
 yarn run start
 ```
 
-
 ## 需求实现
 
 ### 功能开发
+
 - [x] 确认功能模块
 - [x] 连接数据库，定义表字段
 - [x] 定义接口

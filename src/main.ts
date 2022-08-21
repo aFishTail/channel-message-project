@@ -9,6 +9,7 @@ import { ValidationPipe } from './pipe/validation.pipe';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  
   const config = new DocumentBuilder()
     .addBearerAuth()
     .setTitle('lenjoy api 文档')
