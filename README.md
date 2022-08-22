@@ -1,7 +1,7 @@
 接口文档地址 :[http://81.69.252.155:3000/swagger](http://81.69.252.155:3000/swagger)
 ## Setup
 
-### 准备工作
+### 准备工作\
 
 ```
 1. git clone <https://github.com/aFishTail/channel-message-project>  && cd channel-message-project

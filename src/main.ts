@@ -11,8 +11,8 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('lenjoy api 文档')
-    .setDescription('lenjoy api 文档')
+    .setTitle('channel-message api 文档')
+    .setDescription('channel-message api 文档')
     .setVersion('1.0')
     .build();
 
